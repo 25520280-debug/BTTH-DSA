@@ -18,19 +18,12 @@ int main()
         while (left <= right)
         {
             int mid = left + (right - left)/2;  
-            if (x > v[mid]) left = mid+1;
+            if (x >= v[mid]) left = mid+1;
             else if (x < v[mid]) 
             {
                 flag = false;
                 min_v = min(v[mid],min_v);
                 right = mid-1;
-            }
-            else if (x == v[mid])
-            {
-                flag = false;
-                if (mid < n-1) min_v = v[mid+1];
-                else flag = true;
-                break;
             }
         }
         x = min_v; if (flag) x= -1;
