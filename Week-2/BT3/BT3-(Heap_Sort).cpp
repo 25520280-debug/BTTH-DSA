@@ -1,4 +1,5 @@
-#include <bits\stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 void heapify(vector <int> &v, int n, int i)
@@ -24,7 +25,7 @@ void heapSort(vector <int> &v)
     cout << "Mang sau khi BuildHeap: ";
     for (int x : v) cout << x << ' ';
 
-    for (int i = n-1; i >= 0; i--)
+    for (int i = n-1; i > 0; i--)
     {
         cout << "\nSwap " << v[0] << " va " << v[i] << "\n\n";
         swap(v[0],v[i]);
